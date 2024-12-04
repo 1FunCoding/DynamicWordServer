@@ -23,7 +23,7 @@ DynamicWordServer is a Node.js-based project that demonstrates essential server-
 
 ## Project Structure
 ```
-lab-4/
+nodejs project/
 ├── static/
 │   ├── index.html       # Main HTML file
 │   ├── index.css        # Stylesheet for the application
