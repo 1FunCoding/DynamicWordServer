@@ -44,7 +44,7 @@ nodejs project/
 1. Clone the repository:
    ```bash
    git clone <repository-url>
-   cd lab-4
+   cd nodejsproject
    ```
 2. Install dependencies:
    ```bash
