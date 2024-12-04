@@ -3,7 +3,7 @@
 **Author**: Jerry Wang ([qwang7@scu.edu](mailto:qwang7@scu.edu))
 
 ## Overview
-DynamicWordServer is a Node.js-based project that demonstrates essential server-side development concepts. It incorporates static file serving, client-server interaction, custom fetch behavior, and offline-first UX principles. This project is structured as a lab assignment to teach key web development skills.
+DynamicWordServer is a Node.js-based project that demonstrates essential server-side development concepts. It incorporates static file serving, client-server interaction, custom fetch behavior, and offline-first UX principles. 
 
 ## Features
 1. **Custom Fetch Monkey Patching**
