@@ -1,0 +1,131 @@
+/* index.css */
+
+/* Base settings */
+html {
+  font-size: 10px; /* 1rem will now equal 10px */
+  overflow: hidden;
+}
+
+/* Define custom properties for colors */
+:root {
+  --background-color: #252B28; /* Dark background to match the demo */
+  --magnet-shadow-color: rgba(0, 0, 0, 0.3); /* Shadow color of magnets */
+  --magnet-border-color: #00b300; /* Green border for magnets */
+}
+
+body {
+  position: relative; /* Make magnets position relative to body */
+  background-color: var(--background-color);
+  height: 100vh; /* Ensure body takes at least the height of the viewport */
+  width: 100vw; /* Set width to 100% to avoid unnecessary scrolling */
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center contents vertically */
+  align-items: center; /* Center contents horizontally */
+  gap: 2rem; /* Adds spacing between haiku sections */
+  overflow: hidden;
+}
+
+/* Style for the haiku syllable dots */
+.haiku {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.haiku ul {
+  display: flex;
+  list-style-type: none;
+  gap: 1rem;
+  padding: 0;
+  margin: 1.5rem 0;
+}
+
+.haiku ul li {
+  flex: 0 0 auto;
+  position: relative;
+}
+
+.dot-li {
+  height: 1rem;
+  width: 1rem;
+  background-color: #ffffff; 
+  border-radius: 50%;
+}
+
+.word-li {
+  background-color: transparent;
+  text-align: center;
+  font-size: 1.2rem;
+  flex: 0 0 auto;
+  color: white;
+}
+
+/* Style for the magnets */
+.magnet {
+  position: absolute;
+  /* Removed green box-shadow and border to eliminate green lines */
+  /* Original styles:
+  box-shadow: 5px 5px 0px #00b300;
+  border: 2px solid var(--magnet-border-color);
+  */
+  padding: 0.3rem 0.6rem; 
+  background-color: white;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  cursor: grab;
+  user-select: none;
+  /* Added subtle shadow for better visibility */
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  transition: opacity 0.2s ease;
+}
+
+.magnet.dragging {
+  opacity: 0.5;
+  cursor: grabbing;
+}
+
+/* Dots that are available for dropping */
+.dot-li.available {
+  background-color: #888888 !important;
+}
+
+/* Dots that are unavailable (red) */
+.dot-li.unavailable {
+  background-color: red !important;
+}
+
+/* Prevent existing words from changing colors */
+.word-li.unavailable,
+.word-li.available {
+  background-color: transparent !important;
+  color: white !important;
+}
+
+/* Style for the button container */
+.button-container {
+  display: flex;
+  gap: 1rem;
+}
+
+/* Style for buttons */
+button {
+  padding: 1rem 2rem;
+  font-size: 1.6rem;
+  background-color: var(--magnet-border-color);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+button:hover {
+  background-color: #009900;
+}
+
+button:disabled {
+  background-color: #555555;
+  cursor: not-allowed;
+}
